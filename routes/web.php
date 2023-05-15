@@ -2,6 +2,7 @@
 
 namespace  App\Http\Controllers;
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -29,4 +30,6 @@ Route::middleware(['auth'])->group(function(){
 
     Route::resource('/mahasiswa', MahasiswaController::class)->parameter('mahasiswa', 'id');
     Route::get('/mahasiswa/{id}/nilai', [MahasiswaController::class, 'nilai']);
+
+    Route::resource('articles', ArticleController::class);
 });
