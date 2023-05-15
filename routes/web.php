@@ -27,5 +27,6 @@ Route::middleware(['auth'])->group(function(){
 
     Route::resource('/karyawan', KaryawanController::class)->parameter('karyawan', 'id');
 
-
+    Route::resource('/mahasiswa', MahasiswaController::class)->parameter('mahasiswa', 'id');
+    Route::get('/mahasiswa/{id}/nilai', [MahasiswaController::class, 'nilai']);
 });
