@@ -81,8 +81,8 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         $request->validate([
-            'username' => ['required', 'string', 'max:255', 'unique:users'],
             'name' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:4'],
         ]);
@@ -90,8 +90,8 @@ class RegisterController extends Controller
     $hashedPassword = Hash::make($request -> input('password'));
 
     User::create([
-        'username' => $request -> input('username'),
         'name' => $request -> input('name'),
+        'username' => $request -> input('username'),
         'email' => $request -> input('email'),
         'password' => $hashedPassword
     ]);

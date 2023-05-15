@@ -53,15 +53,15 @@
         </div>
         <div class="form-group">
           <label>Tempat Lahir</label>
-          <input class="form-control @error('ttl') is-invalid @enderror" value="{{ isset($karyawan)? $karyawan->ttl : old('ttl') }}" name="ttl" type="text"/>
-          @error('ttl')
+          <input class="form-control @error('tempat_lahir') is-invalid @enderror" value="{{ isset($karyawan)? $karyawan->ttl : old('tempat_lahir') }}" name="tempat_lahir" type="text"/>
+          @error('tempat_lahir')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror
         </div>
         <div class="form-group">
           <label>Tanggal Lahir</label>
-          <input class="form-control @error('tanggalLahir') is-invalid @enderror" value="{{ isset($karyawan)? $karyawan->tanggalLahir : old('tanggalLahir') }}" name="tanggalLahir" type="date"/>
-          @error('tanggalLahir')
+          <input class="form-control @error('tanggal_lahir') is-invalid @enderror" value="{{ isset($karyawan)? $karyawan->tanggal_lahir : old('tanggal_lahir') }}" name="tanggal_lahir" type="date"/>
+          @error('tanggal_lahir')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror
         </div>

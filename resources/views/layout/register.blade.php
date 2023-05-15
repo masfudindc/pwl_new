@@ -29,18 +29,6 @@
       <form method="POST" action="register">
         @csrf
         {!! (isset($usr))? method_field('PUT') : ''!!}
-        <div class="input-group mb-3">
-          <input class="form-control @error('username') is-invalid @enderror" value="{{ isset($usr)? $usr->username : old('username') }}" name="username" type="text" placeholder="Username">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-user" style="color: #1e3050;"></span>
-            </div>
-          </div>
-
-          @error('username')
-            <span class="error invalid-feedback">{{ $message }} </span>
-          @enderror
-        </div>
 
         <div class="input-group mb-3">
           <input class="form-control @error('name') is-invalid @enderror" value="{{ isset($usr)? $usr->name : old('name') }}" name="name" type="text" placeholder="Full name">
@@ -49,12 +37,23 @@
               <span class="fas fa-user" style="color: #1e3050;"></span>
             </div>
           </div>
-
           @error('name')
             <span class="error invalid-feedback" >{{ $message }} </span>
           @enderror
         </div>
         
+        <div class="input-group mb-3">
+          <input class="form-control @error('username') is-invalid @enderror" value="{{ isset($usr)? $usr->username : old('username') }}" name="username" type="text" placeholder="Username">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user" style="color: #1e3050;"></span>
+            </div>
+          </div>
+          @error('username')
+            <span class="error invalid-feedback">{{ $message }} </span>
+          @enderror
+        </div>
+
         <div class="input-group mb-3">
           <input class="form-control @error('email') is-invalid @enderror" value="{{ isset($usr)? $usr->name : old('email') }}" name="email" type="email" placeholder="Email">
           <div class="input-group-append">
@@ -62,7 +61,6 @@
               <span class="fas fa-envelope" style="color: #1e3050;"></span>
             </div>
           </div>
-
           @error('email')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror
@@ -75,7 +73,6 @@
               <span class="fas fa-lock" style="color: #1e3050;"></span>
             </div>
           </div>
-
           @error('password')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror

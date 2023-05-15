@@ -1,5 +1,7 @@
 <?php
 
+namespace  App\Http\Controllers;
+
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -24,4 +26,6 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/dashboard', [DashboardController::class, 'index']);
 
     Route::resource('/karyawan', KaryawanController::class)->parameter('karyawan', 'id');
+
+
 });

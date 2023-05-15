@@ -65,7 +65,7 @@
                 <td>{{++$i}}</td>
                 <td>{{$p->nip}}</td>
                 <td>{{$p->nama}}</td>
-                <td>{{$p->ttl}}, {{$p->tanggalLahir}}</td>
+                <td>{{$p->tempat_lahir}}, {{$p->tanggal_lahir}}</td>
                 <td>{{$p->email}}</td>
                 <td>{{$p->alamat}}</td>
                 <td>
