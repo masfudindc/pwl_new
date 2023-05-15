@@ -50,6 +50,20 @@
                 </li>
 
                 <li class="nav-item">
+                    <a href="{{ url('/mahasiswa') }}" class="nav-link">
+                        <i class="nav-icon fas fa-city"></i>
+                        <p>Mahasiswa</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ url('/articles') }}" class="nav-link">
+                        <i class="nav-icon fas fa-city"></i>
+                        <p>Articles</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a href="{{ url('/logout') }}" class="nav-link">
                         <i class="nav-icon fas fa-sign-out-alt"></i>
                         <p>Logout</p>

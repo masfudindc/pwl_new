@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="card-body">
-      <a href="{{ url('articles/create_article') }}" class="btn btn-sm btn-success float-right my-2"><i class="fas fa-plus pr-1"></i>Tambah Data</a>
+      <a href="{{ url('articles/create') }}" class="btn btn-sm btn-success float-right my-2"><i class="fas fa-plus pr-1"></i>Tambah Data</a>
       <a href="{{ url('articles/cetak_pdf') }}" class="btn btn-sm btn-success float-right my-2 mr-2"><i class="fas fa-print pr-1"></i></a>
       <table class="table table-bordered table-striped">
           <thead>
