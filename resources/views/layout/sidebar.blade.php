@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="{{ url('#') }}" class="brand-link">
         <img src="{{ asset('assets/images/favicon/company.png') }}" class="brand-image img-circle elevation-3" style="opacity: .5">
-        <span class="brand-text font-weight-light">UTS PWL</span>
+        <span class="brand-text font-weight-light">PWL</span>
     </a>
 
     <!-- Sidebar -->
@@ -46,6 +46,13 @@
                     <a href="{{ url('/karyawan') }}" class="nav-link">
                         <i class="nav-icon fas fa-city"></i>
                         <p>Karyawan</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ url('/mata-kuliah') }}" class="nav-link">
+                        <i class="nav-icon fas fa-city"></i>
+                        <p>Mata Kuliah</p>
                     </a>
                 </li>
 

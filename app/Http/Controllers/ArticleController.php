@@ -121,4 +121,10 @@ class ArticleController extends Controller
         return $pdf->stream();
     }
 
+    
+    // public function cetak_pdf(Request $request)
+    // {
+    //     return view('articles.articles_pdf');
+    // }
+
 }

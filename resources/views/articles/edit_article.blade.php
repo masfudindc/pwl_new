@@ -4,12 +4,12 @@
 <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1>Data Mahasiswa</h1>
+        <h1>Data Artikel</h1>
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
           <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active">Mahasiswa</li>
+          <li class="breadcrumb-item active">Artikel</li>
         </ol>
       </div>
     </div>
@@ -22,7 +22,7 @@
   <!-- Default box -->
   <div class="card">
     <div class="card-header">
-      <h3 class="card-title">Form Mahasiswa</h3>
+      <h3 class="card-title">Form Artikel</h3>
 
       <div class="card-tools">
         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -55,7 +55,7 @@
     </div>
     <!-- /.card-body -->
     <div class="card-footer">
-      Footer Mahasiswa
+      Footer Artikel
     </div>
     <!-- /.card-footer-->
   </div>

@@ -1,5 +1,4 @@
 @extends('layout.template')
-
 @section('content')
 <div class="container-fluid">
     <div class="row mb-2">
@@ -15,15 +14,12 @@
     </div>
   </div><!-- /.container-fluid -->
 </section>
-
 <!-- Main content -->
 <section class="content">
-
   <!-- Default box -->
   <div class="card">
     <div class="card-header">
       <h3 class="card-title">Form Mahasiswa</h3>
-
       <div class="card-tools">
         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
           <i class="fas fa-minus"></i>

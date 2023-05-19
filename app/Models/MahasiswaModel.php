@@ -25,17 +25,17 @@ class MahasiswaModel extends Model
         'hp'
     ];
 
-    // public function prodi(){
-    //     return $this->belongsTo(ProdiModel::class, 'prodi_id', 'prodi_id');
-    // } 
+    public function prodi(){
+        return $this->belongsTo(ProdiModel::class, 'prodi_id', 'prodi_id');
+    } 
 
-    // public function kelas(){
-    //     return $this->belongsTo(Kelas::class);
-    // } 
+    public function kelas(){
+        return $this->belongsTo(KelasModel::class);
+    } 
 
-    // public function mahasiswa_matakuliah()
-    // {
-    //     return $this->hasMany(Mahasiswa_MataKuliah::class);
-    // }
+    public function mahasiswa_matakuliah()
+    {
+        return $this->hasMany(Mahasiswa_MataKuliah::class);
+    }
 
 }

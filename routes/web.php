@@ -23,10 +23,12 @@ Auth::routes();
 Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::middleware(['auth'])->group(function(){
-    Route::get('/', [DashboardController::class, 'index']);
+    Route::resource('/', DashboardController::class);
     Route::get('/dashboard', [DashboardController::class, 'index']);
 
     Route::resource('/karyawan', KaryawanController::class)->parameter('karyawan', 'id');
+
+    Route::get('/mata-kuliah', [MataKuliahController::class, 'index']);
 
     Route::resource('/mahasiswa', MahasiswaController::class)->parameter('mahasiswa', 'id');
     Route::get('/mahasiswa/{id}/nilai', [MahasiswaController::class, 'nilai']);
