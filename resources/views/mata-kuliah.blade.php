@@ -57,16 +57,6 @@
             </tr>
             @endforeach
         </tbody>
-        <tfoot>
-              <tr>
-                <th>No.</th>
-                <th>Kode MK</th>
-                <th>Nama Mata Kuliah</th>
-                <th>SKS</th>
-                <th>Jam</th>
-                <th>Nilai</th>
-              </tr>
-        </tfoot>
       </table>
     </div>
     <!-- /.card-body -->

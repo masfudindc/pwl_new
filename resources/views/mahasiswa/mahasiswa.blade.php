@@ -1,4 +1,5 @@
 @extends('layout.template')
+
 @section('content')
 <div class="container-fluid">
     <div class="row mb-2">
@@ -14,12 +15,15 @@
     </div>
   </div><!-- /.container-fluid -->
 </section>
+
 <!-- Main content -->
 <section class="content">
+
   <!-- Default box -->
   <div class="card">
     <div class="card-header">
       <h3 class="card-title">Tabel Mahasiswa</h3>
+
       <div class="card-tools">
         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
           <i class="fas fa-minus"></i>
@@ -37,6 +41,7 @@
                   <th>No</th>
                   <th>NIM</th>
                   <th>Nama</th>
+                  <th>Foto</th>
                   <th>Prodi</th>
                   <th>Kelas</th>
                   <th>JK</th>
@@ -51,6 +56,9 @@
                           <td>{{ $i + 1 }}</td>
                           <td>{{ $mhs->nim }}</td>
                           <td>{{ $mhs->nama }}</td>
+                          <td>
+                            <img src="{{ asset('storage/' . $mhs->foto) }}" alt="{{ $mhs->nama }}" width="50">
+                          </td>
                           <td>{{ $mhs->prodi->prodi }}</td>
                           <td>{{ $mhs->kelas->nama_kelas }}</td>
                           <td>{{ $mhs->jk }}</td>
@@ -63,6 +71,7 @@
                                   @method('DELETE')
                                   <button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-trash pr-1"></i>Hapus</button>
                               </form>
+                              <a href="{{ url('/mahasiswa/'.$mhs->id.'/nilai') }}" class="btn btn-sm btn-primary"><i class="fas fa-marker"></i>Nilai</a>
                           </td>
                       </tr>
                   @endforeach
@@ -72,18 +81,6 @@
                   </tr>
               @endif
           </tbody>
-          <tfoot>
-              <tr>
-                  <th>No</th>
-                  <th>NIM</th>
-                  <th>Nama</th>
-                  <th>Prodi</th>
-                  <th>Kelas</th>
-                  <th>JK</th>
-                  <th>HP</th>
-                  <th>Action</th>
-              </tr>
-          </tfoot>
       </table>
   </div>
     <!-- /.card-body -->

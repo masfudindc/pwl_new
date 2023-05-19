@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProdiTable extends Migration
+class CreateTabelProdi extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class CreateProdiTable extends Migration
     public function up()
     {
         Schema::create('prodi', function (Blueprint $table) {
-            $table->id();
+            $table->id('prodi_id');
             $table->string('prodi', 50);
             $table->timestamps();
         });
