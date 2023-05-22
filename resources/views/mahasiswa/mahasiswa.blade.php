@@ -81,6 +81,15 @@
                   </tr>
               @endif
           </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="6">
+                <div class="d-flex mt-2">
+                  {{ $paginate->links() }}
+                </div>
+              </th>
+            </tr>
+          </tfoot>
       </table>
   </div>
     <!-- /.card-body -->

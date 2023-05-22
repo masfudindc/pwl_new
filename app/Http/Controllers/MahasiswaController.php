@@ -79,7 +79,7 @@ class MahasiswaController extends Controller
 
         //$data = MahasiswaModel::create($request->except(['_token']));
         return redirect('mahasiswa')
-            ->with('success', 'Mahasiswa Berhasil Ditambahkan');
+            ->with('success', 'Mahasiswa Berhasil Ditambahkan');
 
     }
 
@@ -133,7 +133,7 @@ class MahasiswaController extends Controller
             'nama'=> 'required|string|max:50',
             'foto' => 'image|mimes:jpeg,png,jpg',
             'kelas_id' => 'required',
-            'jk' => 'required|in:L,P',
+            'jk' => 'required|in:L,P,l,p',
             'tempat_lahir' => 'required|string|max:50',
             'tanggal_lahir' => 'required|date',
             'alamat' => 'required|string|max:50',
