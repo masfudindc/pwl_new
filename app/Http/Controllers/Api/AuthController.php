@@ -41,7 +41,7 @@ class AuthController extends Controller
             return $this->apiError('Credentials not match', Response::HTTP_UNAUTHORIZED);
         }
 
-        $user = User::where('email',$validated['email'])->first();
+        $user = User::where('username',$validated['username'])->first();
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return $this->apiSuccess([

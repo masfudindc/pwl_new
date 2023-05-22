@@ -23,8 +23,8 @@ class LoginRequest extends ApiRequest
     public function rules()
     {
         return [
-            'email' => 'required|string|email',
-            'password' => 'required|string|min:8',
+            'username' => 'required|string|max:255',
+            'password' => 'required|string|min:4',
         ];
     }
 }
