@@ -15,13 +15,13 @@ class MahasiswaModel extends Model
     protected $fillable = [
         'nim',
         'nama',
-        'foto',
-        'prodi_id',
-        'kelas_id',
-        'jk',
-        'tempat_lahir',
-        'tanggal_lahir',
-        'alamat',
+        // 'foto',
+        // 'prodi_id',
+        // 'kelas_id',
+        // 'jk',
+        // 'tempat_lahir',
+        // 'tanggal_lahir',
+        // 'alamat',
         'hp'
     ];
 
