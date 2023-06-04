@@ -23,7 +23,9 @@ Auth::routes();
 Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::middleware(['auth'])->group(function(){
-    Route::resource('/', DashboardController::class);
+
+    Route::get('/', [DashboardController::class, 'index']);
+
     Route::get('/dashboard', [DashboardController::class, 'index']);
 
     Route::resource('/karyawan', KaryawanController::class)->parameter('karyawan', 'id');
@@ -35,6 +37,7 @@ Route::middleware(['auth'])->group(function(){
 
     Route::resource('/mahasiswa', MahasiswaController::class)->parameter('mahasiswa', 'id');
     Route::post('/mahasiswa/data', [MahasiswaController::class, 'data']);
+    Route::post('/mahasiswa/delete/{id}', [MahasiswaController::class, 'destroy']);
 
     Route::resource('articles', ArticleController::class)->parameter('articles', 'id');
     Route::get('/articles/cetak_pdf', [ArticleController::class, 'cetak_pdf']);
